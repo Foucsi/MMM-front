@@ -1,21 +1,21 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import React, { Component } from "react";
+import Hello from "../components/Hello";
 
-export default class HomeScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>HomeScreen</Text>
-      </View>
-    );
-  }
+export default function HomeScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Hello navigation={navigation} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    padding: 20,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-end",
+    backgroundColor: "#094074",
   },
 });
