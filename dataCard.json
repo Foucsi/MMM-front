@@ -1,0 +1,16 @@
+[
+  {
+    "id" : 1,
+    "name": "Monteur",
+    "txt" : "Je suis un monteur de meubles",
+    "bg": "#FF5964",
+    "img" : "tools"
+  },
+  {
+    "id": 2,
+    "name": "Client",
+    "txt": "Je recherche une personne pour monter mes meubles",
+    "bg": "#35A7FF",
+    "img": "search"
+  }
+]

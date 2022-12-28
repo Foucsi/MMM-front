@@ -4,6 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import MonteurScreen from "./screens/MonteurScreen";
+import ClientScreen from "./screens/ClientScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Welcome from "./screens/Welcome";
 import { Provider } from "react-redux";
@@ -26,6 +28,8 @@ export default function App() {
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Welcome" component={Welcome} />
+          <Stack.Screen name="Monteur" component={MonteurScreen} />
+          <Stack.Screen name="Client" component={ClientScreen} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

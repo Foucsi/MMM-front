@@ -19,7 +19,7 @@ export default function Header({ navigation }) {
         name="home"
         size={32}
         color="#fff"
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Welcome")}
       />
       <Text style={{ color: "#fff" }}>Bienvenue {users.username} !</Text>
       <AntDesign
