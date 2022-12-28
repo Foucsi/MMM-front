@@ -35,10 +35,11 @@ export default function Header({ navigation }) {
 const styles = StyleSheet.create({
   header: {
     width: "100%",
-    height: "20%",
+    height: "15%",
     backgroundColor: "#094074",
-    alignItems: "center",
+    alignItems: "flex-end",
     justifyContent: "space-evenly",
     flexDirection: "row",
+    paddingBottom: 30,
   },
 });

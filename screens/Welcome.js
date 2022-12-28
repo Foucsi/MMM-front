@@ -10,13 +10,11 @@ export default function Welcome({ navigation }) {
       <Header navigation={navigation} />
       <View
         style={{
-          height: "80%",
+          height: "85%",
           alignItems: "center",
           justifyContent: "center",
         }}
-      >
-        <Text>Bienvenue {users.username}!</Text>
-      </View>
+      ></View>
     </View>
   );
 }
