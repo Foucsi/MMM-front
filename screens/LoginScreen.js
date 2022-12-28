@@ -9,12 +9,14 @@ import React from "react";
 import { useState } from "react";
 import { login } from "../reducers/users";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function LoginScreen({ navigation }) {
   const [prenom, setPrenom] = useState("");
   const [mdp, setMdp] = useState("");
   const [msg, setMsg] = useState("");
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.user.value);
 
   const handleSubmit = () => {
     fetch("http://192.168.1.51:3000/users/signin", {
@@ -59,6 +61,14 @@ export default function LoginScreen({ navigation }) {
               </TouchableOpacity>
             </View>
           );
+        }
+      });
+
+    fetch(`http://192.168.1.51:3000/users/name/${users.username}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.result) {
+          dispatch(login({ username: data.user }));
         }
       });
   };

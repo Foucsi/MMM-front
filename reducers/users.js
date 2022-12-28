@@ -5,6 +5,7 @@ const initialState = {
     token: null,
     username: null,
     email: null,
+    profil: [],
   },
 };
 
@@ -16,11 +17,13 @@ export const userSlice = createSlice({
       state.value.token = action.payload.token;
       state.value.username = action.payload.username;
       state.value.email = action.payload.email;
+      state.value.profil.push(action.payload.profil);
     },
     logout: (state) => {
       state.value.token = null;
       state.value.username = null;
       state.value.email = null;
+      state.value.profil = [];
     },
   },
 });

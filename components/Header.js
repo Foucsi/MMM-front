@@ -4,6 +4,8 @@ import { AntDesign } from "@expo/vector-icons";
 import { logout } from "../reducers/users";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Header({ navigation }) {
   const dispatch = useDispatch();
@@ -13,6 +15,7 @@ export default function Header({ navigation }) {
     dispatch(logout());
     navigation.navigate("Home");
   };
+
   return (
     <View style={styles.header}>
       <AntDesign
@@ -21,7 +24,11 @@ export default function Header({ navigation }) {
         color="#fff"
         onPress={() => navigation.navigate("Welcome")}
       />
-      <Text style={{ color: "#fff" }}>Bienvenue {users.username} !</Text>
+      <View>
+        <Text style={{ color: "#fff" }}>Bienvenue {users.username} !</Text>
+        <Text style={{ color: "#fff" }}>Profil: {users.profil}</Text>
+      </View>
+
       <AntDesign
         name="logout"
         size={30}

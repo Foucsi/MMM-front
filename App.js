@@ -8,6 +8,7 @@ import MonteurScreen from "./screens/MonteurScreen";
 import ClientScreen from "./screens/ClientScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Welcome from "./screens/Welcome";
+import SettingScreen from "./screens/SettingScreen";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -30,6 +31,7 @@ export default function App() {
           <Stack.Screen name="Welcome" component={Welcome} />
           <Stack.Screen name="Monteur" component={MonteurScreen} />
           <Stack.Screen name="Client" component={ClientScreen} />
+          <Stack.Screen name="Settings" component={SettingScreen} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
